@@ -25,7 +25,7 @@ autocmd FileType java set omnifunc=javacomplete#Complet
  
 "Set to auto read when a file is changed from the outside
 if exists("&autoread")
-  set autoread
+	set autoread
 endif
  
 "Have the mouse enabled all the time:
@@ -233,8 +233,14 @@ filetype on
 filetype plugin on
 filetype indent on
 " pydiction
-let g:pydiction_location = '$VIMRUNTIME\pydiction-1.2.1/complete-dict' 
+let g:pydiction_location = '$VIMRUNTIME/pydiction-1.2.1/complete-dict'
 let g:pydiction_menu_height = 20
+" pydoc
+"let g:pydoc_cmd = '/usr/bin/pydoc'
+let g:pydoc_cmd = 'C:\Python32\python -m pydoc'
+let g:pydoc_open_cmd = 'vsplit'
+"let g:pydoc_open_cmd = 'tabnew'
+"let g:pydoc_highlight = 1
 
 " 当右键单击窗口的时候， 弹出快捷菜单
 set mousemodel=popup
@@ -371,3 +377,4 @@ function! s:CloseIfOnlyNerdTreeLeft()
     endif
   endif
 endfunction
+
